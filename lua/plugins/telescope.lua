@@ -95,12 +95,21 @@ return {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
+          -- persisted = {
+          --   layout_config = {
+          --     { width = 0.55, height = 0.55 }
+          --   }
+          -- }
+          persisted = {
+            layout_config = { width = 0.55, height = 0.55 }
+          }
         },
       }
 
       -- Enable telescope extensions, if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'persisted')
 
       -- See `:help telescope.builtin`
       local builtin = require("telescope.builtin")

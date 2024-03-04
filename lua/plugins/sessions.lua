@@ -1,10 +1,17 @@
 return {
     {
         "rmagatti/auto-session",
+        -- lazy = true,
+        -- event = "BufEnter",
+        -- keys = {
+        --     { "<leader>as", "<cmd>SessionRestore<cr>", desc = "AutoSession" },
+        -- },
         config = function()
             require("auto-session").setup({
                 log_level = "error",
-
+                auto_save_enabled = true,
+                auto_restore_enabled = true,
+                -- auto_session_use_git_branch = true,
                 -- ⚠️ This will only work if Telescope.nvim is installed
                 -- The following are already the default values, no need to provide them if these are already the settings you want.
                 session_lens = {
@@ -23,4 +30,13 @@ return {
             })
         end
     }
+    -- Lua
+    -- {
+    --     "olimorris/persisted.nvim",
+    --     config = function ()
+    --         vim.keymap.set("n", "<leader>fs", "<cmd>Telescope persisted<cr>", {
+    --           noremap = true,
+    --         })
+    --     end,
+    -- }
 }

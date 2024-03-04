@@ -28,7 +28,7 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 
-require('lazy').setup('plugins')
+require('lazy').setup('plugins', {})
 
 -- Load the colorscheme here
 -- vim.cmd.colorscheme 'andromeda'

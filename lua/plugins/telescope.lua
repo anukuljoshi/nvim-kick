@@ -77,7 +77,8 @@ return {
         pickers = {
           buffers = {
             show_all_buffers = true,
-            sort_lastused = true,
+            -- sort_lastused = true,
+            sort_mru = true,
             theme = "dropdown",
             winblend = 10,
             previewer = false,

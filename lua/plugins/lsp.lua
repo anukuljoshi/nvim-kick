@@ -1,4 +1,5 @@
 return {
+
     { -- LSP Configuration & Plugins
         'neovim/nvim-lspconfig',
         dependencies = {
@@ -204,4 +205,5 @@ return {
             }
         end,
     },
+
 }

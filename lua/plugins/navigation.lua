@@ -1,4 +1,5 @@
 return {
+
     {
         "chentoast/marks.nvim",
         config = function ()
@@ -9,6 +10,7 @@ return {
             vim.keymap.set("n", "<leader>df", "<Cmd>delmarks a-z<CR>")
         end
     },
+
     {
         "smoka7/hop.nvim",
         version = "*",
@@ -25,4 +27,5 @@ return {
             )
         end
     },
+
 }

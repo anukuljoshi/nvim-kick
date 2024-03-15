@@ -32,7 +32,8 @@ require('lazy').setup('plugins', {})
 
 -- Load the colorscheme here
 -- vim.cmd.colorscheme 'andromeda'
-vim.cmd.colorscheme 'tokyonight-night'
+-- vim.cmd.colorscheme 'tokyonight-night'
+vim.cmd.colorscheme 'tokyonight-storm'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

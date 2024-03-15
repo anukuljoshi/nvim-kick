@@ -1,4 +1,5 @@
 return {
+
     { -- You can easily change to a different colorscheme.
         -- Change the name of the colorscheme plugin below, and then
         -- change the command in the config to whatever the name of that colorscheme is
@@ -12,6 +13,7 @@ return {
             vim.cmd.hi 'Comment gui=none'
         end,
     },
+
     {
         "nobbmaestro/nvim-andromeda",
         dependencies = {
@@ -54,4 +56,5 @@ return {
             vim.cmd[[highlight NormalFloat guibg=#4f525d]]
         end
     },
+
 }

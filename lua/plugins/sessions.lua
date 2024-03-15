@@ -1,4 +1,5 @@
 return {
+
     {
         "rmagatti/auto-session",
         -- lazy = true,
@@ -37,8 +38,12 @@ return {
             vim.keymap.set("n", "<leader>fs", require("auto-session.session-lens").search_session, {
               noremap = true,
             })
+            vim.keymap.set("n", "<leader>sd", "<Cmd>Autosession delete<cr>", {
+              noremap = true,
+            })
         end
     }
+
     -- Lua
     -- {
     --     "olimorris/persisted.nvim",
@@ -48,4 +53,5 @@ return {
     --         })
     --     end,
     -- }
+
 }

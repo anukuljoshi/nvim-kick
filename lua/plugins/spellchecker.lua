@@ -1,4 +1,5 @@
 return {
+
     {
         "kamykn/spelunker.vim",
         config = function ()
@@ -39,4 +40,5 @@ return {
             ]]
         end
     },
+
 }

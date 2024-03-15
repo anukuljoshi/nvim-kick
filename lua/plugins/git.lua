@@ -1,4 +1,5 @@
 return {
+
     {
         -- git
         "lewis6991/gitsigns.nvim",
@@ -52,6 +53,7 @@ return {
             })
         end
     },
+
     {
         "tpope/vim-fugitive",
         config = function ()
@@ -59,4 +61,5 @@ return {
             vim.keymap.set("n", "<leader>gh", "<Cmd>:Git<CR>")
         end
     },
+
 }

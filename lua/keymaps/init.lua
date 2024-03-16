@@ -79,8 +79,8 @@ local function quickFixToggle()
 end
 
 vim.keymap.set('n', '<leader>qo', quickFixToggle)
-vim.keymap.set('n', '<leader>qn', '<cmd>cnext<cr>')
-vim.keymap.set('n', '<leader>qp', '<cmd>cprev<cr>')
+vim.keymap.set('n', ']q', '<cmd>cnext<cr>')
+vim.keymap.set('n', '[q', '<cmd>cprev<cr>')
 
 vim.keymap.set('n', '<leader>sv', '<C-w>v') -- split window vertically
 vim.keymap.set('n', '<leader>sh', '<C-w>s') -- split window horizontally
@@ -108,8 +108,8 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move focus to the lower window'
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 
 -- move between buffers
-vim.keymap.set("n", "<A-.>", "<cmd>bnext<cr>")
-vim.keymap.set("n", "<A-,>", "<cmd>bprev<cr>")
+vim.keymap.set("n", "]b", "<cmd>bnext<cr>")
+vim.keymap.set("n", "[b", "<cmd>bprev<cr>")
 
 function _G.set_terminal_keymaps()
     local opts = {buffer = 0}

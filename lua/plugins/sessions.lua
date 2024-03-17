@@ -3,23 +3,23 @@ return {
     {
         "rmagatti/auto-session",
         -- lazy = true,
-        -- event = "BufEnter",
+        -- event = "BufReadPre",
         -- keys = {
-        --     { "<leader>as", "<cmd>SessionRestore<cr>", desc = "AutoSession" },
+        --     { "<leader>sr", "<cmd>SessionRestore<cr>", desc = "Restore cwd session" },
         -- },
         config = function()
-            local function change_nvim_tree_dir()
-                local nvim_tree = require("nvim-tree")
-                nvim_tree.change_dir(vim.fn.getcwd())
-            end
+            -- local function change_nvim_tree_dir()
+            --     local nvim_tree = require("nvim-tree")
+            --     nvim_tree.change_dir(vim.fn.getcwd())
+            -- end
 
             require("auto-session").setup({
                 log_level = "error",
                 auto_save_enabled = true,
                 auto_restore_enabled = true,
                 auto_session_use_git_branch = true,
-                post_restore_cmds = { change_nvim_tree_dir },
-                pre_save_cmds = { "NvimTreeClose" },
+                -- post_restore_cmds = { change_nvim_tree_dir },
+                -- pre_save_cmds = { "NvimTreeClose" },
 
                 -- ⚠️ This will only work if Telescope.nvim is installed
                 -- The following are already the default values, no need to provide them if these are already the settings you want.
@@ -35,7 +35,7 @@ return {
 
             -- Set mapping for searching a session.
             -- ⚠️ This will only work if Telescope.nvim is installed
-            vim.keymap.set("n", "<leader>fs", require("auto-session.session-lens").search_session, {
+            vim.keymap.set("n", "<leader>sf", require("auto-session.session-lens").search_session, {
               noremap = true,
             })
             vim.keymap.set("n", "<leader>sd", "<Cmd>Autosession delete<cr>", {

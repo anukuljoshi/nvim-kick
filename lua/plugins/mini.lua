@@ -25,9 +25,25 @@ return {
         return ''
       end
 
-      require("mini.files").setup()
-      -- ... and there is more!
-      --  Check out: https://github.com/echasnovski/mini.nvim
+      require("mini.files").setup({
+        -- Module mappings created only inside explorer.
+        -- Use `''` (empty string) to not create one.
+        mappings = {
+          close       = '<leader>e',
+          go_in       = 'l',
+          go_in_plus  = '<CR>',
+          go_out      = 'h',
+          go_out_plus = 'H',
+          reset       = '<BS>',
+          reveal_cwd  = '@',
+          show_help   = 'g?',
+          synchronize = '=',
+          trim_left   = '<',
+          trim_right  = '>',
+        },
+      })
+
+      vim.keymap.set("n", "<leader>e", "<Cmd>lua MiniFiles.open()<CR>", { desc = "open file explorer"})
     end,
   },
 

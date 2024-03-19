@@ -44,14 +44,4 @@ return {
         end
     }
 
-    -- Lua
-    -- {
-    --     "olimorris/persisted.nvim",
-    --     config = function ()
-    --         vim.keymap.set("n", "<leader>fs", "<cmd>Telescope persisted<cr>", {
-    --           noremap = true,
-    --         })
-    --     end,
-    -- }
-
 }

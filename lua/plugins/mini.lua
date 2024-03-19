@@ -2,6 +2,9 @@ return {
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
     config = function()
       -- Better Around/Inside textobjects
       -- Examples:
@@ -43,7 +46,23 @@ return {
         },
       })
 
-      vim.keymap.set("n", "<leader>e", "<Cmd>lua MiniFiles.open()<CR>", { desc = "open file explorer"})
+      local miniOpenCurrent = function()
+        local name = vim.api.nvim_buf_get_name(0)
+        MiniFiles.open(name)
+
+        if name ~= '' then
+          local depth = -2
+          local _, init = name:find(vim.pesc(vim.loop.cwd()))
+          while init do
+            depth = depth + 1
+            init = name:find('/', init + 1)
+          end
+
+          for _ = 1, depth do MiniFiles.go_out() end
+          for _ = 1, depth do MiniFiles.go_in() end
+        end
+      end
+      vim.keymap.set("n", "<leader>e", miniOpenCurrent, { desc = "open file explorer"})
     end,
   },
 

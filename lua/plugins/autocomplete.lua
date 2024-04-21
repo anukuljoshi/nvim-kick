@@ -24,6 +24,7 @@ return {
             'hrsh7th/cmp-nvim-lsp',
             "hrsh7th/cmp-buffer",
             'hrsh7th/cmp-path',
+            "hrsh7th/cmp-nvim-lsp-signature-help",
 
             -- If you want to add a bunch of pre-configured snippets,
             --    you can use this plugin to help you. It even has snippets
@@ -47,6 +48,7 @@ return {
                     end,
                 },
                 completion = { completeopt = 'menu,menuone,noinsert,noselect' },
+                preselect = cmp.PreselectMode.None,
 
                 -- For an understanding of why these mappings were
                 -- chosen, you will need to read `:help ins-completion`
@@ -134,6 +136,7 @@ return {
                     { name = 'luasnip' },
                     { name = 'path' },
                     { name = 'buffer' },
+                    { name = "nvim_lsp_signature_help" },
                 },
             }
         end,

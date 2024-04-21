@@ -2,8 +2,6 @@ return {
 
     {
         "rmagatti/auto-session",
-        lazy = true,
-        -- event = "BufReadPre",
         config = function()
             local function change_nvim_tree_dir()
                 local nvim_tree = require("nvim-tree")
@@ -38,8 +36,7 @@ return {
             vim.keymap.set("n", "<leader>sd", "<Cmd>Autosession delete<cr>", {
               noremap = true,
             })
-            vim.keymap.set("n", "<leader>sr", "<cmd>SessionRestore<cr>")
         end
-    }
+    },
 
 }

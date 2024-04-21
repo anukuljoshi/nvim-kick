@@ -6,8 +6,8 @@ return {
             require("marks").setup({
                 refresh_interval = 250,
             })
-            vim.keymap.set("n", "<leader>dm", "<Cmd>delm! | delm A-Z0-9<CR>")
-            vim.keymap.set("n", "<leader>df", "<Cmd>delmarks a-z<CR>")
+            vim.keymap.set("n", "<leader>dm", "<Cmd>delmarks a-z<CR>")
+            vim.keymap.set("n", "<leader>dM", "<Cmd>delm! | delm A-Z0-9<CR>")
         end
     },
 

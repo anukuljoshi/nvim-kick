@@ -38,6 +38,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d')
 vim.keymap.set({ 'n', 'v' }, '<leader>D', '"_D')
 vim.keymap.set({ 'n', 'v' }, '<leader>c', '"_c')
 vim.keymap.set({ 'n', 'v' }, '<leader>C', '"_C')
+vim.keymap.set('n', 'x', [["_x]])
 
 -- delete to void register when pasting over a selection
 vim.keymap.set('x', '<leader>p', [["_dP]])
@@ -112,11 +113,11 @@ vim.keymap.set("n", "]b", "<cmd>bnext<cr>")
 vim.keymap.set("n", "[b", "<cmd>bprev<cr>")
 
 function _G.set_terminal_keymaps()
-    local opts = {buffer = 0}
-    vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
-    vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
-    vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
-    vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+  local opts = {buffer = 0}
+  vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+  vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+  vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+  vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
 end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead

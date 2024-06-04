@@ -1,5 +1,13 @@
 return {
 
+  -- pretty quickfix list
+  {
+    "yorickpeterse/nvim-pqf",
+    config = function ()
+      require("pqf").setup()
+    end
+  },
+
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 

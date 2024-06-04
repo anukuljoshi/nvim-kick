@@ -68,7 +68,7 @@ return {
         defaults = {
           layout_config = {
             horizontal = {
-              preview_width = 0.65,
+              preview_width = 0.5,
             },
           },
           mappings = {

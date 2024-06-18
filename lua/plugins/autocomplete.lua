@@ -55,6 +55,10 @@ return {
                 --
                 -- No, but seriously. Please read `:help ins-completion`, it is really good!
                 mapping = cmp.mapping.preset.insert {
+
+                    -- manually trigger completion
+                    ['<C-s>'] = cmp.mapping.complete({ reason = cmp.ContextReason.Auto }),
+
                     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
 
